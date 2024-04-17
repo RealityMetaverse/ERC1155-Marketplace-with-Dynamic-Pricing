@@ -1,4 +1,4 @@
-# ERC1155 Store with Dynamic Pricing by HB Craft
+# ERC1155 Store with Dynamic Pricing
 ![version](https://img.shields.io/badge/version-1.0.0-blue)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
