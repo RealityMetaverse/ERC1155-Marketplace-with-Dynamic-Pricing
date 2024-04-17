@@ -1,5 +1,3 @@
-<img src="https://dl.dropboxusercontent.com/scl/fi/82ct56ywcqdr1we6kjum4/ERC20StakingByHBCraft.png?rlkey=2ft8dmou99l36izwp2vcp6i3e&dl=0" alt="ERC20 Staking by HB Craft" align="right" width="200" height="200"/>
-
 # ERC1155 Store with Dynamic Pricing by HB Craft
 ![version](https://img.shields.io/badge/version-1.0.0-blue)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -164,13 +162,3 @@ $ forge install --no-commit Uniswap/v3-core@v1.0.0
 
 ### Unit Test
 The repository includes a series of unit test samples to cover a variety of scenarios. These tests serve as a starting point for the deployers to play with, expand, and adapt to their specific needs ensuring the smart contract perform as intended before deploying.
-
----
-### License
-This work is published under the brand name **HB Craft** and is licensed under the Apache License, Version 2.0 (the "License"); you may not use these files except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-You are authorized to use, modify, and distribute the work provided that appropriate credit is given to **HB Craft**, in any significant usage, you disclose the source of the work by providing a link to the original Apache License, and indicate if changes were made.
-
-The work is distributed under the License on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
