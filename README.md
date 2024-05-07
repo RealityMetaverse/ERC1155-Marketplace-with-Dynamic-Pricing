@@ -1,5 +1,5 @@
 # ERC1155 Store with Dynamic Pricing
-![version](https://img.shields.io/badge/version-1.1.3-blue)
+![version](https://img.shields.io/badge/version-1.1.4-blue)
 
 ### Contract Introduction
 The contract lets you easily set up an ERC1155 store with a dynamic pricing mechanism. Thanks to this contract, you can list your assets priced in a `BASE_TOKEN` while allowing the buyers to purchase them in a `QUOTE_TOKEN`. The listing prices are automatically converted and displayed in the `QUOTE_TOKEN`, no matter if there is decimal difference between `BASE_TOKEN` and `QUOTE_TOKEN`.
