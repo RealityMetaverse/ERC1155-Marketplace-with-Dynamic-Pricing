@@ -1,6 +1,5 @@
 # ERC1155 Store with Dynamic Pricing
-![version](https://img.shields.io/badge/version-1.1.0-blue)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![version](https://img.shields.io/badge/version-1.1.3-blue)
 
 ### Contract Introduction
 The contract lets you easily set up an ERC1155 store with a dynamic pricing mechanism. Thanks to this contract, you can list your assets priced in a `BASE_TOKEN` while allowing the buyers to purchase them in a `QUOTE_TOKEN`. The listing prices are automatically converted and displayed in the `QUOTE_TOKEN`, no matter if there is decimal difference between `BASE_TOKEN` and `QUOTE_TOKEN`.
@@ -109,10 +108,12 @@ Most adminstrative functions are available only to `contractOwner` and you can f
 | `cancelListing`                        | `uint256 listingID`                                                               | **2** and the listing owner |
 | `changeTreasuryAddress`                | `address newTreasuryAddress`                                                      | **1**                       |
 | `createListing`                        | `address nftContractAddress` `uint256 nftID` `uint256 quantity` `uint256 btPrice` | **0**                       |
+| `purchase`                             | `uint256 listingID` `uint256 quantity`                                            | everyone                    |
 | `removeLister`                         | `address listerAddress`                                                           | **2**                       |
 | `resetLockPeriod`                      |                                                                                   | **2**                       |
 | `safePurchase`                         | `uint256 listingID` `uint256 quantity` `uint256 forMaxPriceInQT`                  | everyone                    |
 | `setBTQTRate`                          |                                                                                   | **2**                       |
+| `setListingBTPrice`                    | `uint256 listingID` `uint256 btAmount`                                            | **2** and the listing owner |
 | `setMinimumPriceInQT`                  | `uint256 qtAmount`                                                                | **2**                       |
 | `setRateLockDuration`                  | `uint256 durationInSeconds`                                                       | **2**                       |
 | `setRatePeriodSystemStatus`            | `bool isEnabled`                                                                  | **2**                       |
@@ -136,7 +137,7 @@ Most adminstrative functions are available only to `contractOwner` and you can f
 | `checkRatePeriod`                      |                                                  |
 | `checkTotalListingCount`               |                                                  |
 | `convertBTPriceToQT`                   | `uint256 btPrice`                                |
-| `convertBTToQT`                        | `uint256 btAmount` `bool basedOnCurrentRate`     |
+| `convertBTToQT`                          | `uint256 btAmount` `bool basedOnCurrentRate`     |
 | `getActiveListingIDs`                  |                                                  |
 | `getAllListingProperties`              |                                                  |
 | `getAllValidListings`                  |                                                  |
@@ -165,13 +166,3 @@ The repository includes a series of unit test samples to cover a variety of scen
 ```bash
 $ forge test -vvvv --fork-url <your_rpc_url>
 ```
-
----
-### License
-This work is published under the brand name **HB Craft** and is licensed under the Apache License, Version 2.0 (the "License"); you may not use these files except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-You are authorized to use, modify, and distribute the work provided that appropriate credit is given to **HB Craft**, in any significant usage, you disclose the source of the work by providing a link to the original Apache License, and indicate if changes were made.
-
-The work is distributed under the License on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
